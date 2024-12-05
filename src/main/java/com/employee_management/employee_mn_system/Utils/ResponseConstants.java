@@ -22,4 +22,15 @@ public class ResponseConstants {
     public static final String EMPLOYEE_NOT_EXISTS = "Employee is not Exist ... !";
     public static final String EMPLOYEE_UPDATED_SUCCESSFULLY = "Employee Updated Successfully ... !";
     public static final String EMPLOYEE_DELETED_SUCCESSFULLY = "Employee Deleted Successfully ... !";
+    public static final String DEPARTMENT_SAVED_SUCCESSFULLY = "Department Saved Successfully ... !";
+    public static final String DEPARTMENT_NOT_EXISTS = "Department is not Exist ... !";
+    public static final String DEPARTMENT_UPDATED_SUCCESSFULLY = "Department Updated Successfully ... !";
+    public static final String DEPARTMENT_DELETED_SUCCESSFULLY = "Department Deleted Successfully ... !";
+
+    public static final String INVALID_DATA_DEP = "{" +
+            " \"Invalid Data. All Data is Required !\",\n" +
+            "  \t\t\t\"data\": {\n" +
+            "    \t\t\t\t\"name\": Required !\"\",\n" +
+            "\t\t\t}";
+
 }

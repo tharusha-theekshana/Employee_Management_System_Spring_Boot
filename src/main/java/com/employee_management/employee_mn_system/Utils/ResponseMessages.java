@@ -1,8 +1,10 @@
 package com.employee_management.employee_mn_system.Utils;
 
 
+import com.employee_management.employee_mn_system.Dto.DepartmentResponseDto;
 import com.employee_management.employee_mn_system.Dto.EmployeeDto;
 import com.employee_management.employee_mn_system.Dto.EmployeeResponseDto;
+import com.employee_management.employee_mn_system.Entity.Department;
 import com.employee_management.employee_mn_system.Entity.Employee;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -46,6 +48,26 @@ public class ResponseMessages {
         responseBody.put("Status", httpStatus.value());
         responseBody.put("Message", message);
         responseBody.put("Data", employee);
+
+        return new ResponseEntity<>(responseBody, httpStatus);
+    }
+
+    public static ResponseEntity<Map<String, Object>> getResponseEntityForListDep(String message, List<DepartmentResponseDto> depList, HttpStatus httpStatus) {
+
+        Map<String, Object> responseBody = new HashMap<>();
+        responseBody.put("Status", httpStatus.value());
+        responseBody.put("Message", message);
+        responseBody.put("Data", depList);
+
+        return new ResponseEntity<>(responseBody, httpStatus);
+    }
+
+    public static ResponseEntity<Map<String, Object>> getResponseEntityForOneDep(String message, DepartmentResponseDto dep, HttpStatus httpStatus) {
+
+        Map<String, Object> responseBody = new HashMap<>();
+        responseBody.put("Status", httpStatus.value());
+        responseBody.put("Message", message);
+        responseBody.put("Data", dep);
 
         return new ResponseEntity<>(responseBody, httpStatus);
     }
